@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import './globals.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
@@ -27,8 +28,21 @@ export default function RootLayout({
       </Head>
 
       <html lang="en">
-        <body>{children}</body>
+        <body>
+          <Header />
+          {children}
+        </body>
       </html>
     </>
   );
 }
+
+const Header = () => {
+  return (
+    <header>
+      <Link href='/'>
+        <h1>:Hawk</h1>
+      </Link>
+    </header>
+  );
+};

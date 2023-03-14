@@ -2,6 +2,7 @@
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --header-height: 60px;
 }
 
 * {
@@ -19,4 +20,24 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  height: var(--header-height);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  padding-top: var(--header-height);
 }

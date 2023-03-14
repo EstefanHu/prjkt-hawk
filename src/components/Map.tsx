@@ -4,7 +4,7 @@ import mapboxgl from 'mapbox-gl';
 import beats from '@/lib/beats';
 
 const styles = {
-  height: '90vh',
+  height: '100%',
   width: '100%',
 };
 
@@ -23,7 +23,7 @@ export default function Map() {
     map.on('load', () => {
       map.addSource('beats', {
         type: 'geojson',
-        data: beats as any
+        data: beats as any,
       });
 
       map.addLayer({
