@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import mapboxgl from 'mapbox-gl';
+import beats from '@/lib/beats';
 
 const styles = {
   height: '90vh',
@@ -15,8 +16,26 @@ export default function Map() {
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/light-v11',
-      center: [-122.3321, 47.6062],
-      zoom: 10,
+      center: [-122.3321, 47.61],
+      zoom: 11,
+    });
+
+    map.on('load', () => {
+      map.addSource('beats', {
+        type: 'geojson',
+        data: beats as any
+      });
+
+      map.addLayer({
+        id: 'park-boundary',
+        type: 'fill',
+        source: 'beats',
+        paint: {
+          'fill-color': '#888888',
+          'fill-opacity': 0.4,
+        },
+        filter: ['==', '$type', 'Polygon'],
+      });
     });
   }, []);
 
