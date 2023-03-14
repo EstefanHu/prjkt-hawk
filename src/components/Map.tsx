@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import mapboxgl from 'mapbox-gl';
-import beats from '@/lib/beats.json';
+import beats from '@/lib/beats';
 
 const styles = {
   height: '90vh',
@@ -23,7 +23,7 @@ export default function Map() {
     map.on('load', () => {
       map.addSource('beats', {
         type: 'geojson',
-        data: beats
+        data: beats as any
       });
 
       map.addLayer({
