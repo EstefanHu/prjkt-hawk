@@ -16,3 +16,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Read more
 Read more about Tweet by beats [here](https://www.seattle.gov/police/information-and-data/data/tweets-by-beat)
+
+## GeoJSON
+Projekt Hawk uses the GeoJSON specification (A.K.A. RFC 7946) for mapping and organizing client requests. For details about this format click [here](https://www.rfc-editor.org/rfc/rfc7946)
