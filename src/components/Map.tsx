@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import mapboxgl from 'mapbox-gl';
-import beats from '@/lib/beats';
+import { beats } from '@/lib/geoSpace';
 
 const styles = {
   height: '100%',
