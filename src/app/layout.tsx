@@ -13,6 +13,10 @@ export const metadata = {
   keywords: ['hawk', 'Seattle', 'police', 'map'],
   locale: 'en-US',
   type: 'website',
+  icons: {
+    icon: '/favicon.ico',
+    apple: 'apple-touch-icon.png',
+  },
 };
 
 export default function RootLayout({
